@@ -11,3 +11,8 @@ page:18 hwo to extract data
 06:50:16 KAY CHEN : So it only return the fields keep ticking?
 06:50:34 BLOOMBERG HELP DESK : That is correct, yes.
 06:50:42 BLOOMBERG HELP DESK : It returns a message for each market data event
+
+
+// python API sepcialist
+Michael Schweitzer, reference number is H#856365826
+I am in New York, so I might not always be available at the time when you are he
