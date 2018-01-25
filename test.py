@@ -9,6 +9,7 @@ import threading
 import time
 import simplejson
 
+
 plist = []
 
 def func():
@@ -21,10 +22,10 @@ def func():
         continue
 
 def timer_func():
-     print(plist)
-     timer = threading.Timer(1, timer_func)
-     timer.setDaemon(True)
-     timer.start()
+    print(plist)
+    timer = threading.Timer(1, timer_func)
+    timer.setDaemon(True)
+    timer.start()
      
 if __name__ == '__main__':
     

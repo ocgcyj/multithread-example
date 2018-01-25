@@ -1,0 +1,13 @@
+real time market data
+
+page:89 sync/async way to process the event
+page:18 hwo to extract data
+
+
+// 
+06:47:50 KAY CHEN : But I cannot find the open_px
+06:48:33 KAY CHEN : weird
+06:48:47 BLOOMBERG HELP DESK : OPEN is not showing in your response likely because the real-time open only updates on the first paint of the day
+06:50:16 KAY CHEN : So it only return the fields keep ticking?
+06:50:34 BLOOMBERG HELP DESK : That is correct, yes.
+06:50:42 BLOOMBERG HELP DESK : It returns a message for each market data event
