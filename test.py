@@ -15,7 +15,7 @@ plist = []
 def func():
      for i in range(5):
          plist.append(i)
-#         print(plist)
+         print(plist)
          time.sleep(2)
 
      while 1:

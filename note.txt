@@ -15,4 +15,14 @@ page:18 hwo to extract data
 
 // python API sepcialist
 Michael Schweitzer, reference number is H#856365826
-I am in New York, so I might not always be available at the time when you are he
+I am in New York, so I might not always be available at the time when you are here
+ I am on the WAPI <GO> support team.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ LAST_PRICE
+ PRICE_LAST_TIME_RT

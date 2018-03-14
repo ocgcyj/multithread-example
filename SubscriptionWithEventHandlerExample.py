@@ -48,6 +48,11 @@ class SubscriptionEventHandler(object):
         for msg in event:
             topic = msg.correlationIds()[0].value()
             print( "%s: %s - %s" % (timeStamp, topic, msg.messageType()))
+            
+            msg_list.append(msg)
+#            if msg.messageType() == "MarketDataEvents":
+#                if "LAST_PRICE" in 
+            
             for field in msg.asElement().elements():
                 if field.numValues() < 1:
                     print( "        %s is NULL" % field.name())
@@ -110,13 +115,15 @@ def parseCmdLine():
     (options, args) = parser.parse_args()
 
     if not options.topics:
-        options.topics = ["IBM US Equity"]
+        options.topics = ["EMB US Equity", "EMBIV Index"]
 
     if not options.fields:
         options.fields = ["LAST_PRICE"]
 
     return options
 
+
+msg_list = []
 
 def main():
     options = parseCmdLine()
