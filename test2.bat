@@ -1,0 +1,1 @@
+call "D:\python\WinPython-64bit-3.4.4.6Qt5\scripts\python.bat" "K:\Kay\python program\multithread-example\test2-tim.py"

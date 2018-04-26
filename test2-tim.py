@@ -7,12 +7,10 @@ import threading
 import datetime as dt
 import pandas as pd
 import sys
-sys.path.insert(0, 'K:\python\sql lib')
-import sql_kay as sql
-
 
 import _thread
 import pytz
+import winsound
 
 EXCEPTIONS = blpapi.Name("exceptions")
 FIELD_ID = blpapi.Name("fieldId")
@@ -215,6 +213,7 @@ def execute():
             buy_count += 1
             trade_log_df.loc[len(trade_log_df)] = [now.date(), now, side, nav_last, exe_px, net_diff]
             print(str(now.time()) + " buy at " + str(exe_px))
+            winsound.Beep(1000, 1500)
             return
         
         # sell
@@ -226,6 +225,7 @@ def execute():
             gain_count += 1
             trade_log_df.loc[len(trade_log_df)] = [now.date(), now, side, nav_last, exe_px, net_diff]
             print(str(now.time()) + " sell at " + str(exe_px))
+            winsound.Beep(1000, 1500)
             return
             
         # sell stop loss
@@ -314,11 +314,9 @@ if __name__ == "__main__":
         
     finally:
         print("save data to DB")
-        upload_df = trade_log_df
-        upload_df = upload_df.where((pd.notnull(upload_df)), None)
-        upload_tb = upload_df.values.tolist()
-        upload_tb = [tuple(x) for x in upload_tb]
-        insertDB_etf_trade_log(upload_tb)
+        date = str(getCurrentDateTime().date())
+        trade_log_df.to_excel(r"log\\" + date + '.xlsx')
+
         
 
 
